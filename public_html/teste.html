@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <canvas id="canvas" height="300" width="370"></canvas>
+<br/><br/>
+        <script>
+            var data = {
+    labels: ["Jan", "Fev", "Mar", "Abril", "Maio", "Jun"],
+    datasets: [
+        {
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [23.8, 23.8, 22.7, 21, 17.9, 16.6]
+            
+        }
+    ]
+};
+
+var cv = $("#canvas").get(0).getContext("2d");
+
+var mychart = new Chart(cv).Line(data, {
+bezierCurve: false
+});</script>
+    </body>
+</html>
